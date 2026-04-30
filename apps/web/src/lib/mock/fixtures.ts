@@ -140,7 +140,7 @@ export const MOCK_ANSWER_SUCCESS: AnswerCard = {
   question: 'Tiêu chuẩn chẩn đoán viêm phổi trên X-quang ngực trẻ em theo WHO?',
   answer:
     'Theo WHO, viêm phổi trên X-quang ngực trẻ em được chẩn đoán khi có mờ đồng đặc (consolidation) hoặc tràn dịch màng phổi. Consolidation là vùng mờ đậm đặc có thể theo phân bố thùy hoặc phân thùy, che khuất bờ tim hoặc cơ hoành. Cần đối chiếu với triệu chứng lâm sàng (sốt, ho, khó thở) và xét nghiệm viêm.',
-  citations: [MOCK_CITATIONS[0], MOCK_CITATIONS[1]],
+  citations: [MOCK_CITATIONS[0]!, MOCK_CITATIONS[1]!],
   modelVersion: 'rag-v1.2.0',
   generatedAt: '2026-04-30T09:20:00Z',
   confidence: 0.92,

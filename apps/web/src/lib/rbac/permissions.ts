@@ -54,12 +54,13 @@ export const ROLE_PERMISSIONS: Record<Role, Permission[]> = {
  * Check if a role has a specific permission
  */
 export function hasPermission(role: Role, permission: Permission): boolean {
-  return ROLE_PERMISSIONS[role].includes(permission)
+  const permissions = ROLE_PERMISSIONS[role]
+  return permissions ? permissions.includes(permission) : false
 }
 
 /**
  * Get all permissions for a role
  */
 export function getPermissions(role: Role): Permission[] {
-  return ROLE_PERMISSIONS[role]
+  return ROLE_PERMISSIONS[role] || []
 }

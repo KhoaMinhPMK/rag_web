@@ -18,6 +18,9 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"

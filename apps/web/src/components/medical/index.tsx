@@ -80,12 +80,13 @@ export function FieldBadge({ source, className }: FieldBadgeProps) {
     locked: { icon: <Lock className="h-3 w-3" />, label: 'Khóa' },
   }
 
-  const { icon, label } = config[source]
+  const item = config[source]
+  if (!item) return null
 
   return (
     <span className={cn(fieldVariants({ source }), className)}>
-      {icon}
-      {label}
+      {item.icon}
+      {item.label}
     </span>
   )
 }

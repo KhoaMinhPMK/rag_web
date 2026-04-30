@@ -19,7 +19,11 @@ export default function EpisodePage({ params }: { params: { id: string } }) {
 
     // Mock episode fetch
     const found = MOCK_EPISODES.find((e) => e.id === params.id)
-    setEpisode(found || MOCK_EPISODES[0])
+    if (found) {
+      setEpisode(found)
+    } else {
+      setEpisode(MOCK_EPISODES[0] || null)
+    }
   }, [params.id, router])
 
   if (!episode) {
