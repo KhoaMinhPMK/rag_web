@@ -36,15 +36,23 @@ export default function DashboardPage() {
               <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
               <p className="text-sm text-gray-600">Vai trò: {role}</p>
             </div>
-            <button
-              onClick={() => {
-                sessionStorage.removeItem('userRole')
-                router.push('/login')
-              }}
-              className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-            >
-              Đăng xuất
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => router.push('/query')}
+                className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+              >
+                Knowledge Query
+              </button>
+              <button
+                onClick={() => {
+                  sessionStorage.removeItem('userRole')
+                  router.push('/login')
+                }}
+                className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Đăng xuất
+              </button>
+            </div>
           </div>
         </div>
       </header>
