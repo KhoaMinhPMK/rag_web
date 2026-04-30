@@ -6,25 +6,23 @@
   "author": "Bệnh viện Nhi Đồng",
   "license": "PROPRIETARY",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@8.15.0",
   "scripts": {
-    "dev": "pnpm --filter @bvnhidong/web dev",
-    "build": "pnpm --filter @bvnhidong/web build",
-    "start": "pnpm --filter @bvnhidong/web start",
-    "lint": "pnpm --filter @bvnhidong/web lint",
-    "typecheck": "pnpm --filter @bvnhidong/web typecheck",
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "start": "npm run start --workspace=apps/web",
+    "lint": "npm run lint --workspace=apps/web",
+    "typecheck": "npm run typecheck --workspace=apps/web",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
-    "test": "pnpm --filter @bvnhidong/web test",
-    "test:watch": "pnpm --filter @bvnhidong/web test:watch",
-    "test:coverage": "pnpm --filter @bvnhidong/web test:coverage",
-    "test:e2e": "pnpm --filter @bvnhidong/web test:e2e",
-    "test:e2e:ui": "pnpm --filter @bvnhidong/web test:e2e:ui",
-    "storybook": "pnpm --filter @bvnhidong/web storybook",
-    "build-storybook": "pnpm --filter @bvnhidong/web build-storybook",
+    "test": "npm run test --workspace=apps/web",
+    "test:watch": "npm run test:watch --workspace=apps/web",
+    "test:coverage": "npm run test:coverage --workspace=apps/web",
+    "test:e2e": "npm run test:e2e --workspace=apps/web",
+    "test:e2e:ui": "npm run test:e2e:ui --workspace=apps/web",
+    "storybook": "npm run storybook --workspace=apps/web",
+    "build-storybook": "npm run build-storybook --workspace=apps/web",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -37,7 +35,6 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
       "prettier --write"
     ],
     "*.{json,md,css}": [
